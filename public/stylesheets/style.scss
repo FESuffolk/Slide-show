@@ -38,11 +38,11 @@ section{
   padding:20px;
   width:1240px;
   h2{
-    font-size:30px;
-    margin-bottom:20px;
+    font-size:42px;
+    margin-bottom:24px;
   }
   p{
-    font-size:16px;
+    font-size:22px;
   }
   &.active{
     opacity:1;
@@ -53,6 +53,7 @@ footer{
   border-top:1px solid #ccc;
   position:absolute;
   bottom:0;
+  padding:20px;
   height:60px;
   width:100%;
   background:#121221;
@@ -60,7 +61,7 @@ footer{
   p{
     position:absolute;
     text-align:left;
-    top:20px;
+    bottom:0px;
   }
   p:first-child{
     left:20px;
