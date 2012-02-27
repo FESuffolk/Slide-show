@@ -36,7 +36,8 @@ section {
   background: #fff;
   position: absolute;
   color: #334;
-  width: 100%; }
+  width: 100%;
+  min-height: 800px; }
   section h2 {
     font-size: 42px;
     margin: 24px; }
