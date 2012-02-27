@@ -2,8 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  width: 1280px;
-  height: 800px;
+  width: 100%;
   background-color: #000; }
 
 h1, h2 {
@@ -11,12 +10,14 @@ h1, h2 {
 
 blockquote {
   background-color: #000;
-  color: #fff;
+  color: #ccc;
   padding: 10px;
   border: 1px solid #333;
-  font-family: "courier new"; }
+  font-family: "courier new";
+  font-size: 30px;
+  font-weight: bold; }
   blockquote strong {
-    color: orange; }
+    color: white; }
 
 header {
   background-color: rgba(150, 10, 150, 0.3);
@@ -37,19 +38,19 @@ section {
   position: absolute;
   color: #334;
   width: 100%;
-  min-height: 800px; }
+  min-height: 700px; }
   section h2 {
     font-size: 42px;
     margin: 24px; }
   section p {
-    font-size: 22px;
+    font-size: 26px;
     margin: 0 24px 24px 24px; }
   section.active {
     opacity: 1; }
 
 footer {
   border-top: 1px solid #ccc;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 60px;
   width: 100%;

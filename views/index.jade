@@ -18,37 +18,40 @@ section
 
 section
   h2 How Strong is your Selector?
-  p Specificity
-  p Ids = strong
-  p Classes = medium
-  p tags = weak
-  p chain selectors for more specificity
-
+  p Specificity is key!
+  blockquote
+    strong #unique
+    {background-color:teal;}
+  blockquote
+    strong .common
+    {background-color:red;}
+  blockquote
+    strong div
+    {background-color:blue;}
+  blockquote
+    strong div p strong
+    {background-color:light-green;}
+  p You can create strong selectors by chaining them together.
 section
   h2 Cascading
-  p order matters
-  p cascading
-  p strength increases as you travel down
+  blockquote 
+    p p { color:pink;}
+    p p { color:green;}
+    p p { color:yellow;}
+  p Order matters
+  p Cascading
+  p Strength increases as you travel down
 
 section
   h2 CSS3/HTML5
   p section+p = all &lt;p&gt;s immediately after &lt;section&gt;
-  p section~p = all &lt;p&gt;s after &lt;section&gt;
-  p section>p = all &lt;p&gt;s that are children of &lt;section&gt;
   p p:first-child = first &lt;p&gt; within it's parent
   p p:nth-child(even) = every other &lt;p&gt; starting with the second element.
   p p:first-of-type = the first &lt;p&gt; on the page
   p p:first-letter = selects the first letter within all &lt;p&gt;s
   p p:before/p:after = create pseudo elements within your &lt;p&gt;s
-  p p[data-awesome'='true'] = selects each &lt;p&gt; with the attribute 'data-awesome' set to true
+  p p[data-awesome='true'] = selects each &lt;p&gt; with the attribute 'data-awesome' set to true
   p media queries = not really selectors but target specific browsers/devices/orientations
-
-section
-  h2 SASS/SCSS
-  p precompiled stylesheets.
-  p nesting more natural layout within the sheet.
-  p mixins/variables: store and repeat data throught your sheet.
-  p inherits: share styles between selectors more sensibly.
 
 section
   h2 How I do it!
@@ -63,6 +66,8 @@ section
   p CSS is often re-read recycled and re-used.
   p Use whitespace.
   p Semantic naming not style naming.
+  p On larger projects multiple stylesheets.
+  p be consistent with naming schemes.
 
 section
   h2 Conclusion
