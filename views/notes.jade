@@ -1,0 +1,93 @@
+header
+  h1 Clever Selectors
+
+section
+  h2 Why Selectors?
+  p CSS is often a great bugbear for those that deal with it regularly, and a great source of confusion for those who are new to the subject. I'm of the opinion that many of the problems to do with CSS come from the way in which people approach it. Having had a wander about the internet and done plenty of view sourcing in my time I've found that a lot of people don't try very hard when it comes to laying out their CSS, I suspect these same people get very frustrated when that element they are trying to style just won't do as they are told and end up resorting to inserting additional ids, classes or even the dreaded !important. I know about this because I do it myself. Because life is short and work is shorter. This presentation is an attempt to save everyone a bit of bother and to avoid resorting to 
+    strong desperate measures 
+    .
+section
+  h2 What Are Selectors?
+  p As this is the first FES I'm assuming nothing, therefore this is a css selector 
+    strong body
+    {font-family:sans-serif;}
+    It is an indicator to your browser as to how to style specific html elements within your document.
+
+section
+  h2 How Strong is your Selector?
+  p Different Selectors have different strengths, the majority of these can be based on specificity (how precisely they describe teh element you are trying to style).
+  
+  p Id's tend to be the strongest selectors as there is only one on the page.
+  p Followed by that are classes these allow disparate elements to have the same style rules applied  
+  p Tag name, these single out specific tags such as p or section these are often every general and get overlooked to be used by Ids and classes.
+  
+  p To gain more specificity you can chain selectors together to describe the location of your elements within their parent elements e.g. body section p{color:#333;}
+
+section
+  h2 Cascading
+  p The strength of a selector varies greatly depending on the positioning of your elements within the stylesheet itself, in the case of two rules that are equivalent (the same level of specificity)
+
+section
+  h2 CSS3/HTML5
+  p Ah these two, those buzz words, what does the latest incarnation of markup and styling provide us with? bear in mind the support of this varies between browsers.
+
+  p p~span = 
+  
+  p section+p = the + operator allows you to select elements that directly follow other elements, in this example any p tags that follow a section tag will be included.
+
+  p section>p = the > operator allowsy our to select paragraph tags when they are the direct children of a section tag.
+
+  p p:first-child = provides you with a quick access to the first example of a selctor within it's parent.
+
+  p p:nth-child(even/odd/2) = this allows you to select an element based upon their order iwthin the parent element, using even and odd isa good way to provide alternating styles for a list
+
+  p p:first-of-type = similar to :first-child but is document wide, this would select the first 
+
+  p p:before/p:after = these two allow you to insert new elements before or after the 
+
+  p p:first-letter = Ideal for you print officiandos, allows you to select the first letter within your 
+
+  p media queries = althought not considered slectors they allow yo utp provide additional css rules for various tsstes of the brwoser for example styles for print or mobile devices and differing orientations.
+
+section
+  h2 SASS/LESS
+  p I couldn't talk about modern styling without referring to these two, both enable you to restructure your code in some clever ways.
+
+  p nesting: this encourges you to start chaining more selectors together by nesting them within each other, this will help reduce the need for classes/ids in your markup
+
+  p mixins: trying to use the latest browser specific selectors? tryin gto remember the syntax for all teh 10 billion aways of doing css transforms? bundle them together with a mixin.
+
+  p inherits: Using inherits
+
+section
+  h2 My Structure
+  p This is purely based on personal experience and personal preference but I've found it easier to re-visit my stylesheets if there is are some rules about structure.
+
+  p syntax, all classes in lower case with hyphens between them. haviun ga convention can help prevent your stylesheet having two calsses called freshTunes and fresh-tunes.
+  
+  p order: I have found a convenient way of ordering my css is to order it by strength in reverse order, at the top of each stylesheet are the most general styles, those based upon tags (e.g, em{color:orange;}), followed by those based on classes (e.g. .hidden{opacity:0}). I put my media queries at the bottom of the page as I see them as specific changes in circumstances (a bit like classes).
+  
+  p indentation, I'm a bit of a fanatic when it coems to indentation, but it really makes your code far more readable. Be consistent and ultra neat.
+
+  p I try to avoid using ids to style my pages as far as possible, they are too specific and it is often the case that you will need multiple examples of each 
+
+
+section
+  h2 Readability
+  p If you work alone or with others CSS can be some of your most often re-read and recycled code. Any steps you can take to improve readability can make life easier for each other
+
+  p white space is your friend, try to put line breaks into your code.
+
+  p semantic naming: name your classes to represent their relationship to the markup. class1 helps no-one special-offer isn't great but its an improvement special-offer-container is probably better as it states the
+
+section
+  h2 Conclusion
+  p Having a think about how you use your selectors can really help organize your work and ultimately help make your life easier, thinking about the strength of your selectors can help reduce conflicts and allow your desigsn to be re-used by others over and over.
+
+footer
+  span to navigate use the left and right arrows on your keyboard.
+  p made by 
+    a(href='www.twitter.com/atleastimtrying') @atleastimtrying
+
+
+script(src='/javascripts/notes.js')

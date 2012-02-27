@@ -24,18 +24,7 @@ app.configure 'production', ->
 
 app.get '/', routes.index
 
+app.get '/notes', routes.notes
+
 app.listen 3000
 console.log "Express server listening on port #{app.address().port}"
-
-io = require('socket.io').listen app
-
-io.sockets.on 'connection', (socket)->
-  socket.on 'upload', (data)->
-    console.log data
-    io.sockets.emit 'download', {x: data.x, y: data.y}
-  
-  socket.on 'logged in', (data)->
-    connections.push {
-      twitter_id: data.twitter_id
-      id: socket.id
-    }
