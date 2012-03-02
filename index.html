@@ -1,1 +1,92 @@
-My GitHub Page
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Clever Selectors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Clever Selectors</h1>
+    </header>
+    <section>
+      <h2>Why Selectors?</h2>
+      <p>CSS is often a pain</p>
+      <p>CSS bugs can be tough to trace</p>
+      <p>Everyone has to deal with them.</p>
+    </section>
+    <section>
+      <h2>What Are Selectors?</h2>
+      <blockquote>
+        <strong>body</strong>{font-family:sans-serif;}
+      </blockquote>
+      <blockquote>
+        <strong>#special.selection</strong>{background-color:teal;}
+      </blockquote>
+    </section>
+    <section>
+      <h2>How Strong is your Selector?</h2>
+      <p>Specificity is key!</p>
+      <blockquote>
+        <strong>#unique</strong>{background-color:teal;}
+      </blockquote>
+      <blockquote>
+        <strong>.common</strong>{background-color:red;}
+      </blockquote>
+      <blockquote>
+        <strong>div</strong>{background-color:blue;}
+      </blockquote>
+      <blockquote>
+        <strong>div p strong</strong>{background-color:light-green;}
+      </blockquote>
+      <p>You can create strong selectors by chaining them together.</p>
+    </section>
+    <section>
+      <h2>Cascading</h2>
+      <blockquote>
+        <p>p { color:pink;}</p>
+        <p>p { color:green;}</p>
+        <p>p { color:yellow;}</p>
+      </blockquote>
+      <p>Order matters</p>
+      <p>Cascading</p>
+      <p>Strength increases as you travel down</p>
+    </section>
+    <section>
+      <h2>CSS3/HTML5</h2>
+      <p>section+p = all &lt;p&gt;s immediately after &lt;section&gt;</p>
+      <p>p:first-child = first &lt;p&gt; within it's parent</p>
+      <p>p:nth-child(even) = every other &lt;p&gt; starting with the second element.</p>
+      <p>p:first-of-type = the first &lt;p&gt; on the page</p>
+      <p>p:first-letter = selects the first letter within all &lt;p&gt;s</p>
+      <p>p:before/p:after = create pseudo elements within your &lt;p&gt;s</p>
+      <p>p[data-awesome='true'] = selects each &lt;p&gt; with the attribute 'data-awesome' set to true</p>
+      <p>media queries = not really selectors but target specific browsers/devices/orientations</p>
+    </section>
+    <section>
+      <h2>How I do it!</h2>
+      <p>Personal preference but worth thinking about</p>
+      <p>All classes lowercase with hyphen between, clear distinction from javascript variables.</p>
+      <p>Order tags > class > ids >media queries</p>
+      <p>Indentation, be obsessive.</p>
+      <p>Avoid ids</p>
+    </section>
+    <section>
+      <h2>Readability</h2>
+      <p>CSS is often re-read recycled and re-used.</p>
+      <p>Use whitespace.</p>
+      <p>Semantic naming not style naming.</p>
+      <p>On larger projects multiple stylesheets.</p>
+      <p>be consistent with naming schemes.</p>
+    </section>
+    <section>
+      <h2>Conclusion</h2>
+      <p>A little work now less work later.</p>
+      <p>Give CSS some time and care it affects how the end user sees your work.</p>
+    </section>
+    <footer>
+      <span>to navigate use the left and right arrows on your keyboard.</span>
+      <p>made by <a href="www.twitter.com/atleastimtrying">@atleastimtrying</a></p>
+    </footer>
+  </body>
+</html>
